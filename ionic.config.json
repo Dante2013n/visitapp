@@ -1,0 +1,7 @@
+{
+  "name": "VisitApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

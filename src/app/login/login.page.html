@@ -1,0 +1,30 @@
+<ion-content padding class="colorBody">
+    <ion-grid style="height:100%">
+        <ion-row style="height:100%">
+          <ion-col align-self-center>
+              <ion-card id="card" padding>
+              <br>
+              <ion-img id="img"  src="/assets/visitapp.png"></ion-img>
+              <br><br>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div text-center>
+                        <firebase-ui></firebase-ui>
+                        <h4 *ngIf="afAuth.auth.currentUser">
+                          Bienvenido!!
+                          <br>
+                          {{afAuth.auth.currentUser.displayName}}
+                        </h4>
+                        <ion-button color="success" *ngIf="afAuth.auth.currentUser" routerLink="/home" shape="round">Start</ion-button>
+                        <br><br><br>
+                        <a id="salir" *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</a>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
